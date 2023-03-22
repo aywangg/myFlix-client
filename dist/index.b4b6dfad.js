@@ -2927,8 +2927,6 @@ try {
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _client = require("react-dom/client");
 var _mainView = require("./components/main-view/main-view");
-var _movieCard = require("./components/movie-card/movie-card");
-var _movieView = require("./components/movie-view/movie-view");
 //import statement to bundle './index.scss'
 var _indexScss = require("./index.scss");
 //main component
@@ -2939,12 +2937,12 @@ const MyFlixApplication = ()=>{
             children: " Good morning "
         }, void 0, false, {
             fileName: "src/index.jsx",
-            lineNumber: 13,
+            lineNumber: 11,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/index.jsx",
-        lineNumber: 12,
+        lineNumber: 10,
         columnNumber: 9
     }, undefined);
 };
@@ -2955,7 +2953,7 @@ const root = (0, _client.createRoot)(container);
 //tells React to render app in root DOM element
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(MyFlixApplication, {}, void 0, false, {
     fileName: "src/index.jsx",
-    lineNumber: 23,
+    lineNumber: 21,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -2966,7 +2964,7 @@ $RefreshReg$(_c, "MyFlixApplication");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"eoXmc","./components/main-view/main-view":"4gflv","./components/movie-card/movie-card":"bwuIu","./components/movie-view/movie-view":"ggaUx"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./index.scss":"lJZlQ","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"eoXmc","./components/main-view/main-view":"4gflv"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("216ee553f5aa2f85");
 
