@@ -6,12 +6,8 @@ import "./index.scss";
 
 //main component
 const MyFlixApplication = () => {
-    return (
-        <div className = "my-flix">
-            <div> Good morning </div>
-        </div>
-    );
-};
+    return <MainView />;
+  };
 
 //finds root of app
 const container = document.querySelector("#root");
