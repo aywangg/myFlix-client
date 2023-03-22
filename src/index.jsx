@@ -1,4 +1,7 @@
 import { createRoot} from 'react-dom/client';
+import { MainView } from "./components/main-view/main-view";
+import { MovieCard } from "./components/movie-card/movie-card";
+import { MovieView } from "./components/movie-view/movie-view";
 
 //import statement to bundle './index.scss'
 import "./index.scss";
