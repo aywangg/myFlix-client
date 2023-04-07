@@ -18,13 +18,14 @@ export const MainView = () => {
       .then((data) => {
         const moviesFromApi = data.docs.map((doc) => {
           return {
-            id: doc.key,
-            title: doc.title,
-            image: `https://my-flix-app.herokuapp.com/movies`,
-            director: doc.director_name?.[0]
+            id: movie._id,
+            title: movie.Title,
+            image: movie.ImagePath,
+            description: movie.Description,
+            genre: movie.Genre.Name,
+            director: movie.Director.Name,
           };
         });
-
         setMovies(moviesFromApi);
       });
   }, []);
