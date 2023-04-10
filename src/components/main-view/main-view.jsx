@@ -46,6 +46,10 @@ export const MainView = () => {
     });
 }, [token]);
 
+useEffect(() => {
+  setViewMovies(movies);
+}, [movies]);
+
 return (
   <BrowserRouter>
     <NavigationBar
@@ -138,7 +142,7 @@ return (
                 <Col>The list is empty!</Col>
               ) : (
                 <>
-                  {movies.map((movie) => (
+                  {viewMovies.map((movie) => (
                     <Col className="mb-4" key={movie.id} md={3}>
                       <MovieCard movie={movie} />
                     </Col>
