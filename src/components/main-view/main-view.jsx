@@ -3,6 +3,7 @@ import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
+import { ProfileView } from "../profile-view/profile-view";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -12,9 +13,9 @@ export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
   const storedToken = localStorage.getItem("token");
   const [movies, setMovies] = useState([]);
-  const [selectedMovie, setSelectedMovie] = useState(null);
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
+  const [viewMovies, setViewMovies] = useState(movies);
 
   useEffect(() => {
     fetch("https://my-flix-app.herokuapp.com/movies")
@@ -51,6 +52,11 @@ return (
       user={user}
       onLoggedOut={() => {
       setUser(null);
+      setToken (null);
+      localStorage.clear();
+      }}
+      onSearch = {(query) => {
+        setViewMovies (movies.filter (movie => movie.title.toLowerCase().includes(query.toLowerCase)));
       }}
     />
       <Row className = "justify-content-md-center">
@@ -132,9 +138,9 @@ return (
                 <Col>The list is empty!</Col>
               ) : (
                 <>
-                  {books.map((book) => (
-                    <Col className="mb-4" key={book.id} md={3}>
-                      <BookCard book={book} />
+                  {movies.map((movie) => (
+                    <Col className="mb-4" key={movie.id} md={3}>
+                      <MovieCard movie={movie} />
                     </Col>
                   ))}
                 </>
