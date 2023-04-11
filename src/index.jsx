@@ -18,3 +18,8 @@ const root = createRoot(container);
 
 //tells React to render app in root DOM element
 root.render(<MyFlixApplication/>);
+
+const port = process.env.PORT || 8080;
+app.listen(port, '0.0.0.0',() => {
+ console.log('Listening on Port ' + port);
+});
