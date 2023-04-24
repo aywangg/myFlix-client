@@ -65,7 +65,7 @@ return (
     />
       <Row className = "justify-content-md-center">
         <Routes>
-          <button
+          {/* <button
             onClick={() => {
             setUser(null);
             setToken(null);
@@ -73,7 +73,7 @@ return (
             }}
           > 
             Logout
-          </button>
+          </button> */}
         <Route
           path = "/signup"
           element = {
